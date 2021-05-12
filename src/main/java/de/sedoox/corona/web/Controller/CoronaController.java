@@ -19,7 +19,7 @@ import java.util.Date;
 public class CoronaController {
 
 
-    @CrossOrigin("localhost:5500")
+    @CrossOrigin("http://127.0.0.1:5500/")
     @GetMapping
     public PDF getIndex(Authentication authentication) {
         MyUserDetails userDetails = (MyUserDetails) authentication.getPrincipal();
@@ -35,4 +35,6 @@ public class CoronaController {
 
         return pdf;
     }
+
+
 }
